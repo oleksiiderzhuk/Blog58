@@ -8,6 +8,8 @@
 
 -—
 
+php artisan migrate:fresh --seed
+dec factory+seeder
 php artisan make:factory PostFactory --model=Post
 
 php artisan make:model Post -m

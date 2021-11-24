@@ -7,8 +7,8 @@ use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
 $factory->define(Post::class, function (Faker $faker) {
-    $title =$faker->realText(rand(10.40));
-    $short_title = mb_strlen($title)>30 ? mb_str($title, 0, 30) . '...' : $title;
+    $title =$faker->realText(rand(10, 40));
+    $short_title = mb_strlen($title)>30 ? mb_substr($title, 0, 30) . '...' : $title;
     $created = $faker->dateTimeBetween('-30 days', '-1 days');
 
 
@@ -16,9 +16,9 @@ $factory->define(Post::class, function (Faker $faker) {
         'title' => $title,
         'short_title' => $short_title,
         'author_id' => rand(1, 4),
-        'descr' => $faker->realText(rand(100.500)),
+        'descr' => $faker->realText(rand(100, 500)),
         'created_at' => $created,
-        'updated at' => $created,
+        'updated_at' => $created,
     
     ];
 });
