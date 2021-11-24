@@ -5,3 +5,10 @@
 5. страница оедактирования конкретного поста - edit
 6. непосредсвенно редактироваание конкретного поста 
 7. удаление конкретного поста
+
+-—
+
+composer require barryvdh/laravel-debugbar:3.2.5
+
+Laravel Extra Intellisense for VScode extension
+
