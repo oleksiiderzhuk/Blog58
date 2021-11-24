@@ -7,7 +7,7 @@
 7. удаление конкретного поста
 
 -—
-
+installation: https://github.com/barryvdh/laravel-debugbar
 composer require barryvdh/laravel-debugbar:3.2.5
 
 Laravel Extra Intellisense for VScode extension
