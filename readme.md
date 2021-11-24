@@ -7,6 +7,13 @@
 7. удаление конкретного поста
 
 -—
+
+php artisan make:factory PostFactory --model=Post
+
+php artisan make:model Post -m
+
+---
+
 php artisan ide-helper:generate //now there is no error underline of the Route:: in web.php
 
 installation & usage: https://github.com/barryvdh/laravel-ide-helper
