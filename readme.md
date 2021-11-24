@@ -7,7 +7,12 @@
 7. удаление конкретного поста
 
 -—
-installation: https://github.com/barryvdh/laravel-debugbar
+php artisan ide-helper:generate //now there is no error underline of the Route:: in web.php
+
+installation & usage: https://github.com/barryvdh/laravel-ide-helper
+composer require barryvdh/laravel-ide-helper:2.6.7
+
+installation & usage: https://github.com/barryvdh/laravel-debugbar
 composer require barryvdh/laravel-debugbar:3.2.5
 
 Laravel Extra Intellisense for VScode extension
