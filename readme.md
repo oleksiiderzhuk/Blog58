@@ -6,16 +6,24 @@
 6. непосредсвенно редактироваание конкретного поста 
 7. удаление конкретного поста
 
--—
+-—03
+edit index +<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+to the head
+add bootstrap navbar to views/posts/index
 
+routes/web.php - Route::get('/', 'PostController@index');
+
+php artisan make:controller PostController
+
+
+---02
 php artisan migrate:fresh --seed
 dec factory+seeder
 php artisan make:factory PostFactory --model=Post
 
 php artisan make:model Post -m
 
----
-
+---01
 php artisan ide-helper:generate //now there is no error underline of the Route:: in web.php
 
 installation & usage: https://github.com/barryvdh/laravel-ide-helper
