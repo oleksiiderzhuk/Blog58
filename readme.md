@@ -9,6 +9,8 @@
 7. удаление конкретного поста
 
 -—03
+foreach ($posts as $post) using blade syntacsis
+
 install extentions Elm Emmet and Mithril Emmet extensions to VSCode, create automated code via .container>.row>.col-6>.card>.card-header+.card-body
 
 bootstrap and styles.css links in the head of indexblade
