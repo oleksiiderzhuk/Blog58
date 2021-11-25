@@ -7,9 +7,12 @@
 7. удаление конкретного поста
 
 -—03
+bootstrap and styles.css links in the head of indexblade
+
 edit index +<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 to the head
 add bootstrap navbar to views/posts/index
+https://getbootstrap.com/docs/5.1/components/navbar/
 
 routes/web.php - Route::get('/', 'PostController@index');
 
