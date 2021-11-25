@@ -45,5 +45,21 @@
       </div>
     </div>
   </nav>
+
+
+  {{--construction for automated coding VSCode should install Elm Emmet and Mithril Emmet extensions
+     .container>.row>.col-6>.card>.card-header+.card-body --}}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header"></div>
+          <div class="card-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

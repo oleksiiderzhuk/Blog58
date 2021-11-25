@@ -1,3 +1,5 @@
+Практический курс по Laravel (2019)
+
 1. вывод всех постов на экран - index
 2. страница создания нового поста - create
 3. непосредственно создание нового поста - store
@@ -7,6 +9,8 @@
 7. удаление конкретного поста
 
 -—03
+install extentions Elm Emmet and Mithril Emmet extensions to VSCode, create automated code via .container>.row>.col-6>.card>.card-header+.card-body
+
 bootstrap and styles.css links in the head of indexblade
 
 edit index +<link rel="stylesheet" href="{{ asset('css/app.css') }}">
