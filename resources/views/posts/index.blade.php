@@ -47,6 +47,7 @@
                 </div>
             @endforeach
         </div>
+        {{ $posts->links() }}     // for pagination working 
     </div>
 
 </body>

@@ -9,6 +9,7 @@
 7. удаление конкретного поста - destroy
 
 -—04
+join tables in PostController@index, author output
 php artisan make:controller PostController -r
 delete PostController
 
