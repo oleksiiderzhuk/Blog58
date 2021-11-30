@@ -23,8 +23,9 @@
                         <a class="nav-link" aria-current="page" href="/">Создать пост</a>
                     </li>
 
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Найти пост..." aria-label="Search">
+                    <form class="d-flex" action="{{ route('post.index') }}" method="get">
+                        <input class="form-control me-2" name="search" type="search" placeholder="Найти пост..."
+                            aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Поиск</button>
                     </form>
             </div>
@@ -34,21 +35,36 @@
 
     {{-- construction for automated coding VSCode should install Elm Emmet and Mithril Emmet extensions
      .container>.row>.col-6>.card>.card-header+.card-body --}}
-
     <div class="container">
         <div class="row">
+            <?php
+            $i = 0;
+            ?>
             @foreach ($posts as $post)
+                <?php
+                $i++;
+                ?>
                 <div class="col-6">
                     <div class="card">
-                        <div class="card-header"><h2>{{ $post->short_title }}</h2></div>
+                        <div class="card-header">
+                            <h2>{{ $post->short_title }}</h2>
+                        </div>
                         <div class="card-body">
-                          <div class="card-img" style="background-image: url({{$post->img ?? asset('img/default.png')}})"></div>
+                            <div class="card-img"
+                                style="background-image: url({{ $post->img ?? asset('img/02.jpg') }})"></div>
+                            <div class="card-author">Автор: {{ $post->name }}</div>
+                            <a href="" class="btn btn-outline-primary">Посмотреть пост</a>
+                            <a href="#" class="btn btn-outline-primary">qqq</a>
+                            <a href="" class="btn btn-info">Info</a>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
-        {{ $posts->links() }}     // for pagination working 
+
+        @if (!isset($_GET['search']))
+            {{ $posts->links() }} // for pagination working
+        @endif
     </div>
 
 </body>

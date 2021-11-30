@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "necinc.elmmet"
+        "necinc.elmmet",
+        "thekalinga.bootstrap4-vscode",
+        "ysemeniuk.emmet-live"
     ]
 }
