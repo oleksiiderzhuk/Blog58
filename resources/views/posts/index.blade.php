@@ -36,14 +36,24 @@
     {{-- construction for automated coding VSCode should install Elm Emmet and Mithril Emmet extensions
      .container>.row>.col-6>.card>.card-header+.card-body --}}
     <div class="container">
+
+      @if (isset($_GET['search']))
+        @if(count($posts)>0))
+        <h2>По запросу <?=$_GET['search']?> </h2>
+        <p class="lead">найдено {{ count($posts) }} постов</p>
+
+        @else
+          <h2>По запросу <?=$_GET['search']?> ничего не найдено</h2>
+          <a href="{{ route('post.index') }}" class="btn btn-outline-primary">Отобразить все посты</a>
+        @endif
+      @endif
+
         <div class="row">
             <?php
-            $i = 0;
+            $i = 2;
             ?>
             @foreach ($posts as $post)
-                <?php
-                $i++;
-                ?>
+                
                 <div class="col-6">
                     <div class="card">
                         <div class="card-header">
@@ -51,7 +61,7 @@
                         </div>
                         <div class="card-body">
                             <div class="card-img"
-                                style="background-image: url({{ $post->img ?? asset('img/02.jpg') }})"></div>
+                                style="background-image: url({{ $post->img ?? asset('img/0'.$i.'.jpg') }})"></div>
                             <div class="card-author">Автор: {{ $post->name }}</div>
                             <a href="" class="btn btn-outline-primary">Посмотреть пост</a>
                             <a href="#" class="btn btn-outline-primary">qqq</a>
@@ -59,6 +69,9 @@
                         </div>
                     </div>
                 </div>
+                <?php
+                $i++;
+                ?>
             @endforeach
         </div>
 
