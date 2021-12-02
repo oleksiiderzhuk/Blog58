@@ -13,7 +13,7 @@
         </div>
         
         <div class="form-group">
-            <input type="file"class="form-group">    
+            <input type="file" name="img" class="form-group">    
         </div>
         
         <div class="form-group">

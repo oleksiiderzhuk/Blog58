@@ -8,13 +8,14 @@
 6. непосредсвенно редактироваание конкретного поста - update
 7. удаление конкретного поста - destroy
 
+-—05
+
+
 -—04
 create form create, route.create, add button for create post
 join tables in PostController@index, author output
 php artisan make:controller PostController -r
 delete PostController
-
-
 
 -—03
 foreach ($posts as $post) using blade syntacsis

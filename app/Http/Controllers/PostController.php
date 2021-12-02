@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Post;
 
@@ -48,7 +49,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+        $post->title = $request->title;
+        $post->short_title = Str::length($request->title)>30 ? Str::substr($request->title, 0, 30) . '...' : $request->title;
+        
     }
 
     /**
