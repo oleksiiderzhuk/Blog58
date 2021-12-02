@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section("content")
-      @if (isset($_GET['search']))
+     @if (isset($_GET['search']))
         @if(count($posts)>0))
         <h2>По запросу <?=$_GET['search']?> </h2>
         <p class="lead">найдено {{ count($posts) }} постов</p>
