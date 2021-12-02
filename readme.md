@@ -9,6 +9,7 @@
 7. удаление конкретного поста - destroy
 
 -—04
+create form create, route.create, add button for create post
 join tables in PostController@index, author output
 php artisan make:controller PostController -r
 delete PostController
