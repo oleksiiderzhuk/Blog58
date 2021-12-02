@@ -9,7 +9,9 @@
 7. удаление конкретного поста - destroy
 
 -—05
-
+php artisan storage:link  to public folder
+build store function in PostController
+create Route::post('post/create', 'PostController@store')->name('post.store');
 
 -—04
 create form create, route.create, add button for create post
