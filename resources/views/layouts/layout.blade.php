@@ -20,7 +20,7 @@
                         <a class="nav-link active" aria-current="page" href="/">Главная</a>
                     </li>
                     <li class="nav-item offset-3 active">
-                        <a class="nav-link" aria-current="page" href="/">Создать пост</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('post.create') }}">Создать пост</a>
                     </li>
 
                     <form class="d-flex" action="{{ route('post.index') }}" method="get">
