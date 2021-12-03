@@ -20,7 +20,8 @@
                         <a class="nav-link active" aria-current="page" href="/">Главная</a>
                     </li>
                     <li class="nav-item offset-3 active">
-                        <a class="nav-link" aria-current="page" href="{{ route('post.create') }}">Создать пост</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('post.create') }}">Создать
+                            пост</a>
                     </li>
 
                     <form class="d-flex" action="{{ route('post.index') }}" method="get">
@@ -37,15 +38,13 @@
      .container>.row>.col-6>.card>.card-header+.card-body --}}
     <div class="container">
         @if (session('success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ session('success') }}
-            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          @endif
-            @yield('content')
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="margin-left: 100px">X</button>
+            </div>
+        @endif
+        @yield('content')
     </div>
 </body>
-</html> 
 
-    
+</html>
