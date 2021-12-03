@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section("content")
-   <form action="" method="post" enctype="multipart/form-data">
+   <form action="{{ route.store }}" method="post" enctype="multipart/form-data">
         @csrf
         <h3>Создать пост </h3>
         {{-- .form-group*3 --}}
