@@ -36,6 +36,13 @@
     {{-- construction for automated coding VSCode should install Elm Emmet and Mithril Emmet extensions
      .container>.row>.col-6>.card>.card-header+.card-body --}}
     <div class="container">
+        @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          @endif
             @yield('content')
     </div>
 </body>

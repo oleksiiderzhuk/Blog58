@@ -9,7 +9,8 @@
 7. удаление конкретного поста - destroy
 
 -—05
-php artisan storage:link  to public folder
+add alert-succes flash message
+php artisan storage:link  global storage to public folder
 build store function in PostController
 create Route::post('post/create', 'PostController@store')->name('post.store');
 

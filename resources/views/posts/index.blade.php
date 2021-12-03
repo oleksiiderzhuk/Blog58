@@ -28,7 +28,7 @@
                             style="background-image: url({{ $post->img ?? asset('img/0' . $i . '.jpg') }})"></div>
                         <div class="card-author">Автор: {{ $post->name }}</div>
                         <a href="" class="btn btn-outline-primary">Посмотреть пост</a>
-                        <a href="#" class="btn btn-outline-primary">qqq</a>
+                        <a href="#" class="btn btn-outline-primary">Button</a>
                         <a href="" class="btn btn-info">Info</a>
                     </div>
                 </div>
