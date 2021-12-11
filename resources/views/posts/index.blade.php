@@ -13,29 +13,29 @@
     @endif
 
     <div class="row">
-        <?php
-        $i = 2;
-        ?>
-        @foreach ($posts as $post)
 
-            <div class="col-6">
+        @foreach ($posts as $post)
+            <div class="col-4">
                 <div class="card">
                     <div class="card-header">
                         <h2>{{ $post->short_title }}</h2>
                     </div>
                     <div class="card-body">
+                        {{-- <div>post_id: {{ $post->post_id }}</div> --}}
+                        <?php
+                        $k = rand(1, 5);
+                        // echo 'k: ' . $k;
+                        ?>
                         <div class="card-img"
-                            style="background-image: url({{ $post->img ?? asset('img/0' . $i . '.jpg') }})"></div>
+                            style="background-image: url({{ $post->img ?? asset('img/0' . $k . '.jpg') }})"></div>
                         <div class="card-author">Автор: {{ $post->name }}</div>
-                        <a href="{{ route('post.show', ['id' => $post->post_id]) }}" class="btn btn-outline-primary">Посмотреть пост</a>
-                        <a href="#" class="btn btn-outline-primary">Button</a>
-                        <a href="" class="btn btn-info">Info</a>
+                        <a href="{{ route('post.show', ['id' => $post->post_id]) }}"
+                            class="btn btn-outline-primary">Посмотреть пост</a>
+                        {{-- <a href="#" class="btn btn-outline-primary">Button</a>
+                        <a href="" class="btn btn-info">Info</a> --}}
                     </div>
                 </div>
             </div>
-            <?php
-            $i++;
-            ?>
         @endforeach
     </div>
 
