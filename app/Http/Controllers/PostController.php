@@ -29,7 +29,7 @@ class PostController extends Controller
 
         $posts = Post::join('users', 'author_id', '=', 'users.id')
         ->orderBy('posts.created_at', 'desc')
-        ->paginate(4);
+        ->paginate(21);
         return view('posts.index', compact('posts')); 
     }
 

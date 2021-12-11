@@ -27,7 +27,7 @@
                         // echo 'k: ' . $k;
                         ?>
                         <div class="card-img"
-                            style="background-image: url({{ $post->img ?? asset('img/0' . $k . '.jpg') }})"></div>
+                            style="background-image: url({{ asset('img/' . $post->img . '.jpg') }})"></div>
                         <div class="card-author">Автор: {{ $post->name }}</div>
                         <a href="{{ route('post.show', ['id' => $post->post_id]) }}"
                             class="btn btn-outline-primary">Посмотреть пост</a>
