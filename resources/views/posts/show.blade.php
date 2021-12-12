@@ -7,7 +7,7 @@
         $k = rand(1, 5);
         ?>
 
-<div>post_id: {{ $post->post_id }}</div>
+{{-- <div>post_id: {{ $post->post_id }}</div> --}}
 
         <div class="col-12">
             <div class="card">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card-img card-img__max"
-                        style="background-image: url({{ $post->img ?? asset('img/0' . $k . '.jpg') }})"></div>
+                        style="background-image: url({{ asset('img/' . $post->img . '.jpg') }})"></div>
                         <div class="card-author">Автор: {{ $post->name }}</div>
                         <div class="card-author">Пост создан: {{ $post->created_at }}</div>
                         <a href="{{ route('post.index') }}" class="btn btn-outline-primary">На главную</a>
