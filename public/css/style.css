@@ -19,3 +19,7 @@ nav{
 .card-img, .card-author{
     margin-bottom: 10px;
 }
+
+.card-img__max{
+    height: 500px;
+}
