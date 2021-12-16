@@ -15,6 +15,7 @@ $factory->define(Post::class, function (Faker $faker) {
     return [
         'title' => $title,
         'short_title' => $short_title,
+        'img' => rand(1, 21),
         'author_id' => rand(1, 4),
         'descr' => $faker->realText(rand(100, 500)),
         'created_at' => $created,
