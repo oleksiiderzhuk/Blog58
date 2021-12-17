@@ -26,8 +26,8 @@
                         $k = rand(1, 5);
                         // echo 'k: ' . $k;
                         ?>
-                        <div class="card-img"
-                        style="background-image: url({{ asset('img/' .  $post->img  . '.jpg') }})"></div>
+                        <a href="{{ route('post.show', ['id' => $post->post_id]) }}"><div class="card-img"
+                        style="background-image: url({{ asset('img/' .  $post->img  . '.jpg') }})"></div></a>
                         <div class="card-author">Автор: {{ $post->name }}</div>
                         <a href="{{ route('post.show', ['id' => $post->post_id]) }}"
                             class="btn btn-outline-primary">Посмотреть пост</a>
