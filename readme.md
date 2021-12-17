@@ -9,6 +9,7 @@
 7. удаление конкретного поста - destroy
 
 -—05
+далее комментарии в коммитах
 подключаем скрипты js для интерактивной работы bootstrap
 add alert-succes flash message
 php artisan storage:link  global storage to public folder
