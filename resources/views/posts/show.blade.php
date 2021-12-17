@@ -18,7 +18,7 @@
                     <div class="card-img card-img__max"
                         style="background-image: url({{ asset('img/' . $post->img . '.jpg') }})"></div>
                         <div class="card-author">Автор: {{ $post->name }}</div>
-                        <div class="card-author">Пост создан: {{ $post->created_at }}</div>
+                        <div class="card-date">Пост создан: {{ $post->created_at }}</div>
                         <a href="{{ route('post.index') }}" class="btn btn-outline-primary">На главную</a>
                 </div>
             </div>
