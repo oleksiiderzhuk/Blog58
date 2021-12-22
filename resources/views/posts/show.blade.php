@@ -11,8 +11,14 @@
                     <h2>{{ $post->title }}</h2>
                 </div>
                 <div class="card-body">
+                    <?php 
+                        if (preg_match('~^\d{2}$~', $post->img)) {
+                            $post->img = '/img/' . $post->img . '.jpg';
+                        }
+                    ?>
+                    
                     <div class="card-img card-img__max"
-                        style="background-image: url({{ asset('img/' . $post->img . '.jpg') }})"></div>
+                        style="background-image: url({{ $post->img }})"></div>
                     <div class="card-author">Автор: {{ $post->name }}</div>
                     <div class="card-date">Пост создан: {{ $post->created_at->diffForHumans() }}</div>
                     <div class="card-btn">

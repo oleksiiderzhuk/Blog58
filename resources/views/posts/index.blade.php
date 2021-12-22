@@ -26,8 +26,16 @@
                         $k = rand(1, 5);
                         // echo 'k: ' . $k;
                         ?>
-                        <a href="{{ route('post.show', ['id' => $post->post_id]) }}"><div class="card-img"
-                        style="background-image: url({{ asset('img/' .  $post->img  . '.jpg') }})"></div></a>
+                        <a href="{{ route('post.show', ['id' => $post->post_id]) }}">
+                            <div class="card-img" 
+                            
+                        <?php 
+                            if (preg_match('~^\d{2}$~', $post->img)) {
+                                $post->img = '/img/' . $post->img . '.jpg';
+                            }
+                        ?>
+                                style="background-image: url({{ $post->img }})"></div>
+                        </a>
                         <div class="card-author">Автор: {{ $post->name }}</div>
                         <a href="{{ route('post.show', ['id' => $post->post_id]) }}"
                             class="btn btn-outline-primary">Посмотреть пост</a>
