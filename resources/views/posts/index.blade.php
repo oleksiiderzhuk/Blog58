@@ -27,14 +27,7 @@
                         // echo 'k: ' . $k;
                         ?>
                         <a href="{{ route('post.show', ['id' => $post->post_id]) }}">
-                            <div class="card-img" 
-                            
-                        <?php 
-                            if (preg_match('~^\d{2}$~', $post->img)) {
-                                $post->img = '/img/' . $post->img . '.jpg';
-                            }
-                        ?>
-                                style="background-image: url({{ $post->img }})"></div>
+                            <div class="card-img" style="background-image: url({{ $post->img ?? asset('img/laravel.png')}})"></div>
                         </a>
                         <div class="card-author">Автор: {{ $post->name }}</div>
                         <a href="{{ route('post.show', ['id' => $post->post_id]) }}"
