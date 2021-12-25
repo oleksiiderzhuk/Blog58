@@ -14,6 +14,9 @@
                                         
                     <div class="card-img card-img__max"
                         style="background-image: url({{ $post->img }})"></div>
+                    <div class="card-img card-img__max"
+                        style="background-image: url({{ asset('img/laravel.png') ?? $post->img }})"></div>
+                        
                     <div class="card-author">Автор: {{ $post->name }}</div>
                     <div class="card-date">Пост создан: {{ $post->created_at->diffForHumans() }}</div>
                     <div class="card-btn">
