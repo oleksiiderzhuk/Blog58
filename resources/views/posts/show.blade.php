@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout', ['title'=> "Пост №$post->post_id . $post->title"])
 
 @section('content')
     <div class="row">
