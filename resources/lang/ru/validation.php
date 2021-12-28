@@ -78,11 +78,11 @@ return [
     ],
     'max' => [
         'numeric' => 'The :attribute may not be greater than :max.',
-        'file' => 'The :attribute may not be greater than :max kilobytes.',
+        'file' => 'Поле :attribute должно быть меньше :value килобайт',
         'string' => 'Поле "attribute" должно быть максимум :max символов длиной',
         'array' => 'The :attribute may not have more than :max items.',
     ],
-    'mimes' => 'The :attribute must be a file of type: :values.',
+    'mimes' => 'Поле :attribute должно быть форматом :values',
     'mimetypes' => 'The :attribute must be a file of type: :values.',
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',
@@ -145,6 +145,11 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'title' => 'Заголовок',
+        'descr' => 'Описание',
+        'img' => 'Изображение',
+        
+    ], 
 
 ];
