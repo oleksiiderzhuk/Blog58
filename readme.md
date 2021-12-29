@@ -8,6 +8,9 @@
 6. непосредсвенно редактироваание конкретного поста - update
 7. удаление конкретного поста - destroy
 
+-—08
+php artisan make:auth
+
 -—07
 php artisan make:request PostRequest
 
