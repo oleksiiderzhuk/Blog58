@@ -9,6 +9,7 @@
 7. удаление конкретного поста - destroy
 
 -—08
+copy <!-- Right Side Of Navbar --> from app.blade.php to layout.blade.php to the right from the search
 php artisan make:auth
 
 -—07
