@@ -10,6 +10,7 @@
 
 -—08
 git add -f vendor/laravel/framework/src/Illuminate/Foundation/Auth/ for saving flash messages settings
+
 copy <!-- Right Side Of Navbar --> from app.blade.php to layout.blade.php to the right from the search
 php artisan make:auth
 
