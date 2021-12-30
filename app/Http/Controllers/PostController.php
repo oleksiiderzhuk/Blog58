@@ -93,6 +93,11 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+
+        if ($post->author_id != \Auth::user()->id) {
+            return redirect()->route('post.index')->withErrors('Вы не можете редактировать данный пост');
+        }
+
         return view('posts.edit', compact('post'));
     }
 
@@ -106,6 +111,10 @@ class PostController extends Controller
     public function update(PostRequest $request, $id)
     {
         $post = Post::find($id);
+        if ($post->author_id != \Auth::user()->id) {
+            return redirect()->route('post.index')->withErrors('Вы не можете редактировать данный пост');
+        }
+
         $post->title = $request->title;
         $post->short_title = Str::length($request->title)>30 ? Str::substr($request->title, 0, 30) . '...' : $request->title;
         $post->descr = $request->descr;
@@ -131,6 +140,9 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+        if ($post->author_id != \Auth::user()->id) {
+            return redirect()->route('post.index')->withErrors('Вы не можете удалить данный пост');
+        }
         $post->delete();
         return redirect()->route('post.index')->with('success', 'Пост успешно удален!');
     }
