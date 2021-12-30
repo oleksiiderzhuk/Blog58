@@ -2,8 +2,8 @@
 /public/hot
 /public/storage
 /storage/*.key
-/vendor
-!/vendor/laravel/framework/src/Illuminate/Foundation/Auth
+/vendor/*
+!/vendor/laravel/framework/src/Illuminate/Foundation/Auth/*.php
 .env
 .env.backup
 .phpunit.result.cache
