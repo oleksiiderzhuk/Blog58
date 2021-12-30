@@ -159,7 +159,7 @@ trait AuthenticatesUsers
 
         $request->session()->invalidate();
 
-        return $this->loggedOut($request) ?: redirect('/')->with('status', 'Вы успешно вышли из личного кабинета');
+        return $this->loggedOut($request) ?: redirect('/')->with('success', 'Вы успешно вышли из личного кабинета');
     }
 
     /**
