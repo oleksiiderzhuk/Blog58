@@ -3,11 +3,11 @@
 @section('content')
     @if (isset($_GET['search']))
         @if (count($posts) > 0))
-            <h2>По запросу "<?=htmlspecialchars($_GET['search']) ?>" </h2>
+            <h2>По запросу <?= $_GET['search'] ?> </h2>
             <p class="lead">найдено {{ count($posts) }} постов</p>
 
         @else
-            <h2>По запросу "<?=htmlspecialchars($_GET['search']) ?>" ничего не найдено</h2>
+            <h2>По запросу <?= $_GET['search'] ?> ничего не найдено</h2>
             <a href="{{ route('post.index') }}" class="btn btn-outline-primary">Отобразить все посты</a>
         @endif
     @endif
@@ -27,7 +27,7 @@
                         // echo 'k: ' . $k;
                         ?>
                         <a href="{{ route('post.show', ['id' => $post->post_id]) }}">
-                            <div class="card-img" style="background-image: url({{ $post->img ?? asset('img/laravel.png')}})"></div>
+                            <div class="card-img" style="background-image: url({{ $post->img ?? 'public'.asset('img/laravel.png')}})"></div>
                         </a>
                         <div class="card-author">Автор: {{ $post->name }}</div>
                         <a href="{{ route('post.show', ['id' => $post->post_id]) }}"

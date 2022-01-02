@@ -107,7 +107,7 @@ trait AuthenticatesUsers
         $this->clearLoginAttempts($request);
 
         return $this->authenticated($request, $this->guard()->user())
-                ?: redirect()->intended($this->redirectPath())->with('success', 'Вы успешно вошли в личный кабинет');
+                ?: redirect()->intended($this->redirectPath());
     }
 
     /**
@@ -159,7 +159,7 @@ trait AuthenticatesUsers
 
         $request->session()->invalidate();
 
-        return $this->loggedOut($request) ?: redirect('/')->with('success', 'Вы успешно вышли из личного кабинета');
+        return $this->loggedOut($request) ?: redirect('/');
     }
 
     /**
