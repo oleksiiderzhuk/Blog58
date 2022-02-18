@@ -25,7 +25,7 @@ php artisan make:request PostRequest
 далее комментарии в коммитах
 подключаем скрипты js для интерактивной работы bootstrap
 add alert-succes flash message
-php artisan storage:link  global storage to public folder
+php artisan storage:link                    //global storage to public folder
 build store function in PostController
 create Route::post('post/create', 'PostController@store')->name('post.store');
 
